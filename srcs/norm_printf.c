@@ -62,7 +62,7 @@ void	help_for_ft_helpforparsing(struct s_part *part, char **str)
 	if (**str == '+')
 		part->plus = 1;
 	if (**str == 'L')
-		part->L = 1;
+		part->lll = 1;
 	if (**str == '0')
 		part->zero = 1;
 }
@@ -70,7 +70,7 @@ void	help_for_ft_helpforparsing(struct s_part *part, char **str)
 void	help_for_ft_fill_struct(struct s_part *this)
 {
 	this->field = 0;
-	this->L = 0;
+	this->lll = 0;
 	this->hh = 0;
 	this->h = 0;
 	this->j = 0;

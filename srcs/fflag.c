@@ -51,7 +51,7 @@ static char		*mantissa(struct s_part *part, unsigned long kek, int k, int l)
 			part->e += i[k - 1];
 	if (((kek >> l & 1u)) == 1)
 		part->negative = 1;
-	if ((part->e == -1022 && part->L == 0) || part->e == -16382)
+	if ((part->e == -1022 && part->lll == 0) || part->e == -16382)
 		mant[0] = '0';
 	return (mant);
 }
@@ -87,7 +87,7 @@ int				ft_fflag(char *str, struct s_part *part)
 {
 	ft_parsing(part, &str, 'f');
 	part->f = 1;
-	if (part->L == 1)
+	if (part->lll == 1)
 	{
 		part->ldnum = va_arg(*part->arg, long double);
 		flnumber(part);
